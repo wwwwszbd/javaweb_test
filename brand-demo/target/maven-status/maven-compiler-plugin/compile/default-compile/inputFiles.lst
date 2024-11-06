@@ -1,0 +1,10 @@
+D:\javacode\brand-demo\src\main\java\com\itheima\mapper\BrandMapper.java
+D:\javacode\brand-demo\src\main\java\com\itheima\mapper\UserMapper.java
+D:\javacode\brand-demo\src\main\java\com\itheima\pojo\Brand.java
+D:\javacode\brand-demo\src\main\java\com\itheima\pojo\User.java
+D:\javacode\brand-demo\src\main\java\com\itheima\service\BrandService.java
+D:\javacode\brand-demo\src\main\java\com\itheima\service\UserService.java
+D:\javacode\brand-demo\src\main\java\com\itheima\util\SqlSessionFactoryUtils.java
+D:\javacode\brand-demo\src\main\java\com\itheima\web\LoginServlet.java
+D:\javacode\brand-demo\src\main\java\com\itheima\web\RegisterServlet.java
+D:\javacode\brand-demo\src\main\java\com\itheima\web\SelectAllServlet.java

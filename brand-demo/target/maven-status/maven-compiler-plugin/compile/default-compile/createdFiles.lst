@@ -1,0 +1,5 @@
+com\itheima\pojo\User.class
+com\itheima\service\UserService.class
+com\itheima\web\RegisterServlet.class
+com\itheima\web\LoginServlet.class
+com\itheima\mapper\UserMapper.class
