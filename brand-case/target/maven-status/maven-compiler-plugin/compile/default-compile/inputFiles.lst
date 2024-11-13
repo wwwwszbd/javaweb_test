@@ -1,0 +1,11 @@
+D:\javacode\brand-case\src\main\java\com\itheima\mapper\BrandMapper.java
+D:\javacode\brand-case\src\main\java\com\itheima\pojo\Brand.java
+D:\javacode\brand-case\src\main\java\com\itheima\pojo\PageBean.java
+D:\javacode\brand-case\src\main\java\com\itheima\service\BrandService.java
+D:\javacode\brand-case\src\main\java\com\itheima\service\impl\BrandServiceImpl.java
+D:\javacode\brand-case\src\main\java\com\itheima\util\SqlSessionFactoryUtils.java
+D:\javacode\brand-case\src\main\java\com\itheima\web\servlet\BaseServlet.java
+D:\javacode\brand-case\src\main\java\com\itheima\web\servlet\BrandServlet.java
+D:\javacode\brand-case\src\main\java\com\itheima\web\servlet\old\AddServlet.java
+D:\javacode\brand-case\src\main\java\com\itheima\web\servlet\old\SelectAllServlet.java
+D:\javacode\brand-case\src\main\java\com\itheima\web\servlet\UserServlet.java

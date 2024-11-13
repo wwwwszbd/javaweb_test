@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.mapper.BrandMapper">
+
+    <resultMap id="brandResultMap" type="brand">
+        <result property="brandName" column="brand_name"/>
+        <result property="companyName" column="company_name"/>
+    </resultMap>
+
+    <!--
+         修改部分字段（当然也能修改全部字段）详细内容看https://blog.csdn.net/qq_51272114/article/details/
+    -->
+    <update id="update">
+        update tb_brand
+        <set>
+            <if test="companyName != null and companyName != '' ">
+                company_name=#{companyName},
+            </if>
+            <if test="brandName != null and brandName != '' ">
+                brand_name=#{brandName},
+            </if>
+            <if test="ordered != null ">
+                ordered=#{ordered},
+            </if>
+            <if test="description != null and description != '' ">
+                description=#{description},
+            </if>
+            <if test="status != null ">
+                status=#{status}
+            </if>
+        </set>
+        where id = #{id};
+    </update>
+
+    <!--
+        批量删除数据（遍历id集合），详细内容看https://blog.csdn.net/qq_51272114/article/details/
+    -->
+    <delete id="deleteByIds">
+        delete from tb_brand where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">#{id}</foreach>
+        ;
+    </delete>
+
+    <!--
+         f分页条件查询
+    -->
+
+    <select id="selectByPageAndCondition" resultType="com.itheima.pojo.Brand" resultMap="brandResultMap">
+        select * from tb_brand
+        <where>
+            <if test="brand.status  != null">
+                and status = #{brand.status}
+            </if>
+            <if test="brand.companyName != null and brand.companyName != '' ">
+                and company_name like #{brand.companyName}
+            </if>
+            <if test="brand.brandName != null and brand.brandName != ''">
+                and brand_name like #{brand.brandName}
+            </if>
+        </where>
+        limit #{begin},#{size}
+    </select>
+
+    <!--
+            根据条件查询总记录数
+    -->
+    <select id="selectTotalCountByCondition" resultType="java.lang.Integer">
+        select count(*) from tb_brand
+        <where>
+            <if test="status  != null">
+                and status = #{status}
+            </if>
+            <if test="companyName != null and companyName != '' ">
+                and company_name like #{companyName}
+            </if>
+            <if test="brandName != null and brandName != ''">
+                and brand_name like #{brandName}
+            </if>
+        </where>
+    </select>
+</mapper>
